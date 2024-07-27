@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* Carousel.css */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel-images {
+  position: relative;
+  height: 400px; /* Ensure this matches the height of your images */
+ 
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+  /* Handwritten.css */
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+  .article {
+    overflow: hidden; /* Ensure that overflow is hidden to contain the animations */
+  }
+  
+  .handwritten {
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .handwritten.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  h1.handwritten, h2.handwritten, p.handwritten {
+    margin: 20px 0; /* Add some margin for spacing */
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: black; /* Optional: add a background color */
+    width: 100%;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-image {
+    width: 20%; /* Adjust the size as needed */
+    height: 20%;
+    margin-right: 10px; /* Space between the image and the text */
+    MARGIN-LEFT: 75%;
+    border-radius: 50%; /* Optional: make the image circular */
+  }
+  
+  h1 {
+    MARGIN-TOP: 44%;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+
+  /* SUBSCRIBE */
+  .signup-section {
+    text-align: center;
+    display: none;
+  }
+  
+  .signup-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .signup-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px; /* Space between the paragraph and the form */
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email-input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Space between the input and the button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50; /* Green background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  /* envelope */
+
+  
+  .envelope-container {
+    margin-top: 15%;
+    position: relative;
+  }
+  
+  .envelope {
+    width: 300px;
+    height: auto; /* Adjust height to auto to fit content */
+    position: relative;
+    perspective: 1000px;
+    margin: 20px auto;
+    transform: translateY(0);
+    transition: transform 0.6s;
+    cursor: pointer; /* Add pointer cursor for clickable area */
+  }
+  
+  .front, .flap, .letter {
+    position: absolute;
+    width: 100%;
+    height: auto; /* Adjust height to auto to fit content */
+  }
+  
+  .front {
+    background: #fff;
+
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+  }
+  
+  .flap {
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    transform-origin: top;
+    transform: rotateX(45deg);
+  }
+  
+  .united {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .united span {
+    font-weight: bold;
+  }
+  
+  .front.hidden {
+    opacity: 0; /* Hide the front when the envelope is open */
+  }
+  
+  .heart {
+    width: 50px;
+    height: 50px;
+    background: red;
+    margin-left: 40%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    margin-top: 10px;
+  }
+  
+  .letter {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff; /* White background for the letter */
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.6s, transform 0.6s;
+    overflow: visible; /* Ensure text does not overflow */
+  }
+  
+  .envelope.open {
+    transform: translateY(-100px); /* Move envelope up */
+  }
+  
+  .envelope.open .front {
+    transform: rotateY(180deg);
+  }
+  
+  .envelope.open .letter {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  /* Container for the merchandise items */
+.merch-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+  gap: 20px; /* Space between items */
+  justify-content: space-between; /* Adjusts spacing between items */
+}
+
+/* Individual item styling */
+.merch-item {
+  flex: 1 1 calc(33.333% - 20px); /* 3 items per row with space in between */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+/* Image styling */
+.merch-image {
+  width: 100%; /* Makes image responsive to the item’s width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Info styling */
+.merch-info {
+  text-align: center; /* Centers text inside the info div */
+}

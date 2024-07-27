@@ -36,3 +36,64 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #4A4A4A; /* Text color */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+ 
+  text-align: center;
+}
+
+.crema-pastel-section {
+  background-color: #F5F5DC; /* Crema Pastel */
+  padding: 1%;
+}
+
+.white-section {
+  background-color: #FFFFFF; /* White */
+}
+
+.light-brown-section {
+  background-color: #D3B89C; /* Light Brown */
+}
+
+.section-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* Optional Button Styling */
+button {
+  background-color: #A89F91; /* Coffee-like button color */
+  color: #FFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8C7B6B; /* Darker shade on hover */
+}
