@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import AboutUsSection from './components/About-Us';
+
 
 import Tabs from './components/Tabs';
 import './App.css';
